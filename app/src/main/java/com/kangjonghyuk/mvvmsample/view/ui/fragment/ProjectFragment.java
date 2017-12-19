@@ -1,11 +1,5 @@
-package com.kangjonghyuk.mvvmsample.view.ui;
+package com.kangjonghyuk.mvvmsample.view.ui.fragment;
 
-import com.kangjonghyuk.mvvmsample.R;
-import com.kangjonghyuk.mvvmsample.databinding.FragmentProjectDetailsBinding;
-import com.kangjonghyuk.mvvmsample.service.model.Project;
-import com.kangjonghyuk.mvvmsample.viewmodel.ProjectViewModel;
-
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -14,6 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.kangjonghyuk.mvvmsample.R;
+import com.kangjonghyuk.mvvmsample.databinding.FragmentProjectDetailsBinding;
+import com.kangjonghyuk.mvvmsample.viewmodel.ProjectViewModel;
 
 /**
  * Created by kangjonghyuk on 2017. 12. 19..

@@ -1,12 +1,5 @@
-package com.kangjonghyuk.mvvmsample.view.ui;
+package com.kangjonghyuk.mvvmsample.view.ui.fragment;
 
-import com.kangjonghyuk.mvvmsample.R;
-import com.kangjonghyuk.mvvmsample.databinding.FragmentProjectListBinding;
-import com.kangjonghyuk.mvvmsample.view.adapter.ProjectAdapter;
-import com.kangjonghyuk.mvvmsample.view.callback.ProjectClickCallback;
-import com.kangjonghyuk.mvvmsample.viewmodel.ProjectListViewModel;
-
-import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -15,6 +8,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.kangjonghyuk.mvvmsample.R;
+import com.kangjonghyuk.mvvmsample.databinding.FragmentProjectListBinding;
+import com.kangjonghyuk.mvvmsample.view.adapter.ProjectAdapter;
+import com.kangjonghyuk.mvvmsample.view.callback.ProjectClickCallback;
+import com.kangjonghyuk.mvvmsample.viewmodel.ProjectListViewModel;
 
 /**
  * Created by kangjonghyuk on 2017. 12. 19..
@@ -60,8 +59,8 @@ public class ProjectListFragment extends Fragment {
     }
 
     private final ProjectClickCallback projectClickCallback = project -> {
-        if(getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)){
-            ((MainActivity) getActivity()).show(project);
-        }
+//        if(getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)){
+//            ((MainActivity) getActivity()).show(project);
+//        }
     };
 }

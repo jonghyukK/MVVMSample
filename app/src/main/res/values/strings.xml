@@ -16,4 +16,14 @@
     <string name="project_description">Project Description</string>
     <string name="open_issues">Open Issues</string>
     <string name="loading_project">Loading Project ...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="fragment_title_1">Title 1</string>
+    <string name="fragment_title_2">Title 2</string>
+    <string name="fragment_title_3">Title 3</string>
+    <string name="fragment_title_4">Title 4</string>
+
 </resources>
