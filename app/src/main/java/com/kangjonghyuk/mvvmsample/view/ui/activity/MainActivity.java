@@ -10,15 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.kangjonghyuk.mvvmsample.R;
 import com.kangjonghyuk.mvvmsample.databinding.ActivityMainBinding;
-import com.kangjonghyuk.mvvmsample.view.adapter.TabPagerAdapter;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment1;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment2;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment3;
+import com.kangjonghyuk.mvvmsample.view.adapter.MainTabPagerAdapter;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment1;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment2;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment3;
 
 public class MainActivity extends AppCompatActivity implements
         TabFragment1.OnFragmentInteractionListener,
         TabFragment2.OnFragmentInteractionListener,
-        TabFragment3.OnFragmentInteractionListener{
+        TabFragment3.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @BindingAdapter({"bind:handler"})
     public static void bindViewPagerAdapter(final ViewPager view, final MainActivity activity) {
-        final TabPagerAdapter adapter = new TabPagerAdapter(view.getContext(), activity
+        final MainTabPagerAdapter adapter = new MainTabPagerAdapter(view.getContext(), activity
                 .getSupportFragmentManager());
         view.setAdapter(adapter);
     }

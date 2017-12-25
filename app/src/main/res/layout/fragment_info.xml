@@ -1,14 +1,166 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:background="#ff7800"
-    tools:context="com.kangjonghyuk.mvvmsample.view.ui.fragment.InfoFragment">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context="com.kangjonghyuk.mvvmsample.view.ui.fragment.sub.InfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- 상단 프로필 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <!-- 프로필 사진 -->
+            <com.kangjonghyuk.mvvmsample.view.ui.widget.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:src="@drawable/no_pic" />
+
+            <!-- 게시물, 팔로워, 팔로잉 레이아웃 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/LL_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 게시물 레이아웃 -->
+                    <LinearLayout
+                        android:id="@+id/LL_container1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="293"
+                            android:textColor="#444444"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="게시물"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- 팔로워 레이아웃 -->
+                    <LinearLayout
+                        android:id="@+id/LL_container2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="293"
+                            android:textColor="#444444"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="팔로워"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <!-- 팔로잉 레이아웃 -->
+                    <LinearLayout
+                        android:id="@+id/LL_container3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="293"
+                            android:textColor="#444444"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="팔로잉"
+                            android:textColor="#999999"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/LL_container"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_border"
+                    android:stateListAnimator="@null"
+                    android:text="프로필 수정"
+                    android:textColor="#484848"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 하단 이름/ 자기소개 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#484848"
+                android:text="91.08.20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="13dp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="2dp"
+                android:text="Design the future, Enjoy the moment\n현재를 즐기며, 미래를 그리다"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

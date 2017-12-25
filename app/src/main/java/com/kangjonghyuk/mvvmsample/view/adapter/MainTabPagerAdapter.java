@@ -6,16 +6,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.kangjonghyuk.mvvmsample.R;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment1;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment2;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment3;
-import com.kangjonghyuk.mvvmsample.view.ui.fragment.TabFragment4;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment1;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment2;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment3;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.main.TabFragment4;
 
 /**
  * Created by USER on 2017-12-19.
  */
 
-public class TabPagerAdapter extends FragmentStatePagerAdapter {
+public class MainTabPagerAdapter extends FragmentStatePagerAdapter {
 
     private static final int First = 0;
     private static final int Second = 1;
@@ -27,7 +27,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
 
-    public TabPagerAdapter(Context context, FragmentManager fm){
+    public MainTabPagerAdapter(Context context, FragmentManager fm){
         super(fm);
         this.mContext = context;
     }

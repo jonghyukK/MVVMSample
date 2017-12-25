@@ -1,4 +1,4 @@
-package com.kangjonghyuk.mvvmsample.view.ui.fragment;
+package com.kangjonghyuk.mvvmsample.view.ui.fragment.main;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 
 import com.kangjonghyuk.mvvmsample.R;
 import com.kangjonghyuk.mvvmsample.databinding.FragmentTabFragment4Binding;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.sub.ArrayPictureFragment;
+import com.kangjonghyuk.mvvmsample.view.ui.fragment.sub.InfoFragment;
 
 public class TabFragment4 extends Fragment {
 

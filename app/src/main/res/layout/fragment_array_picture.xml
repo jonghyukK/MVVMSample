@@ -1,14 +1,89 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#887700"
-    tools:context="com.kangjonghyuk.mvvmsample.view.ui.fragment.ArrayPictureFragment">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context="com.kangjonghyuk.mvvmsample.view.ui.fragment.sub.ArrayPictureFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <!-- 상단 탭 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/LL_tabContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dadada" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <!-- 바둑판식으로 보기 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_launcher_background"/>
+            </RelativeLayout>
+
+            <!-- Vertical형식으로 보기 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_launcher_background"/>
+            </RelativeLayout>
+
+            <!-- 좋아요 누른 사진만 보기 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_launcher_background"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/LL_tabContainer"
+            android:background="#dadada"/>
+    </LinearLayout>
+
+
+
+    <!-- 하단 레이아웃 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL_tabContainer">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RV_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

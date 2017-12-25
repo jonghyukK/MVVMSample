@@ -1,4 +1,4 @@
-package com.kangjonghyuk.mvvmsample.view.ui.fragment;
+package com.kangjonghyuk.mvvmsample.view.ui.fragment.sub;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,19 +9,12 @@ import android.view.ViewGroup;
 import com.kangjonghyuk.mvvmsample.R;
 
 public class InfoFragment extends Fragment {
+
+
     public InfoFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment InfoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static InfoFragment newInstance(String param1, String param2) {
         InfoFragment fragment = new InfoFragment();
         Bundle args = new Bundle();
