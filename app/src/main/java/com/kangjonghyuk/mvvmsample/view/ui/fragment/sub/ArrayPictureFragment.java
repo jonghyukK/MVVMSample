@@ -12,6 +12,7 @@ public class ArrayPictureFragment extends Fragment {
 
 
     public ArrayPictureFragment() {
+        // test
         // Required empty public constructor
     }
 
